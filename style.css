@@ -13,6 +13,50 @@ body{
     );
 }
 
+body{
+    background:#f8fafc;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:-200px;
+    left:-200px;
+
+    width:500px;
+    height:500px;
+
+    background:#60a5fa;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    opacity:.3;
+
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    bottom:-200px;
+    right:-200px;
+
+    width:500px;
+    height:500px;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    opacity:.2;
+
+    z-index:-1;
+}
 /* NAVBAR */
 
 nav{
@@ -92,6 +136,16 @@ button:hover{
 
 .hero-image img{
     width:400px;
+    border-radius:30px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+
+    transition:.4s;
+}
+
+.hero-image img:hover{
+    transform:translateY(-10px);
 }
 
 /* FITUR */
@@ -152,4 +206,13 @@ footer{
     text-align:center;
     padding:30px;
     margin-top:50px;
+}
+
+*{
+    font-family:'Space Grotesk', sans-serif;
+}
+
+.hero-text h1{
+    font-weight:700;
+    letter-spacing:-3px;
 }
